@@ -15,7 +15,7 @@ Their main responsibilities include:
 ### Question 2
 
 The .sql files including the solutions are also uploaded in the repository.
-Question 2.a is in question2_schema.sql while questions 2.b, 2.c, 2.d are in question2_queries.sql
+Question 2.a is in [question2_schema.sql](../kotak_sakti_questionnaire/question2_schema.sql) while questions 2.b, 2.c, 2.d are in [question2_queries.sql](../kotak_sakti_questionnaire/question2_queries.sql)
 
 #### 2.a 
 ```SQL
@@ -92,4 +92,4 @@ ON i.id = il.invoice_id
 
 ### Question 3
 
-The solution can be found in the python script question3_python.py, and queries.py is a class that contains the queries.
+The solution can be found in the python script [question3_python.py](../kotak_sakti_questionnaire/question3_python.py), and [queries.py](../kotak_sakti_questionnaire/queries.py) is a class that contains the queries.
