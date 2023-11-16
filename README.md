@@ -59,40 +59,34 @@ CREATE TABLE invoice_lines(
 
 #### 2.b
 ```SQL
-select count(distinct c.name) num_customers
-from customers c
-inner join invoices i
-on c.id = i.customer_id
-inner join invoice_lines il
-on i.id = il.invoice_id
-having sum(il.quantity)>5
+SELECT count(distinct c.name) num_customers
+FROM customers c
+INNER JOIN invoices i
+ON c.id = i.customer_id
+INNER JOIN invoice_lines il
+ON i.id = il.invoice_id
+HAVING sum(il.quantity)>5
 ;
 ```
 
 #### 2.c
 ```SQL
-select c.name
-from customers c
-left join invoices i
+SELECT c.name
+FROM customers c
+LEFT JOIN invoices i
 on c.id = i.customer_id
-where i.id is null
+WHERE i.id is null
 ;
 ```
 
 #### 2.d
 ```SQL
-select il.description book, c.name
-from customers c
-inner join invoices i
-on c.id = i.customer_id
-inner join invoice_lines il
-on i.id = il.invoice_id
-;select il.description book, c.name
-from customers c
-inner join invoices i
-on c.id = i.customer_id
-inner join invoice_lines il
-on i.id = il.invoice_id
+SELECT il.description book, c.name
+FROM customers c
+INNER JOIN invoices i
+ON c.id = i.customer_id
+INNER JOIN invoice_lines il
+ON i.id = il.invoice_id
 ;
 ```
 
